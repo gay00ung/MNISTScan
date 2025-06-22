@@ -10,4 +10,8 @@ class DigitClassifierUseCaseImpl @Inject constructor(
     override fun classifyDigit(bitmap: Bitmap): Int {
         return classifier.classify(bitmap)
     }
+    
+    override fun getProcessedBitmap(bitmap: Bitmap): Bitmap {
+        return classifier.getProcessedBitmap(bitmap)
+    }
 }

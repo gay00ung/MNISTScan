@@ -4,4 +4,5 @@ import android.graphics.Bitmap
 
 interface DigitClassifierUseCase {
     fun classifyDigit(bitmap: Bitmap): Int
+    fun getProcessedBitmap(bitmap: Bitmap): Bitmap
 }
