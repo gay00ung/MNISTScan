@@ -4,9 +4,12 @@ import android.graphics.Bitmap
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import net.ifmain.mnistscan.domain.DigitClassifierUseCase
+import javax.inject.Inject
 
-class DigitViewModel(
+@HiltViewModel
+class DigitViewModel @Inject constructor(
     private val classifierUseCase: DigitClassifierUseCase
 ) : ViewModel() {
 

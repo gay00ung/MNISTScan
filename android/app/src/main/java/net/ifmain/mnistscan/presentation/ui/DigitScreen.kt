@@ -7,11 +7,12 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import net.ifmain.mnistscan.presentation.DigitViewModel
 import net.ifmain.mnistscan.util.DrawingCanvasManager
 
 @Composable
-fun DigitScreen(viewModel: DigitViewModel) {
+fun DigitScreen(viewModel: DigitViewModel = hiltViewModel()) {
     val predictedDigit by viewModel.digit.observeAsState()
     var clearCanvas by remember { mutableStateOf(false) }
 

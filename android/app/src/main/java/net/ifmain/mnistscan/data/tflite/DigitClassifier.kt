@@ -6,9 +6,11 @@ import android.graphics.Color
 import org.tensorflow.lite.Interpreter
 import androidx.core.graphics.get
 import androidx.core.graphics.scale
+import javax.inject.Inject
 
-class DigitClassifier(context: Context) {
-
+class DigitClassifier @Inject constructor(
+    context: Context
+) {
     private val interpreter: Interpreter
 
     init {
