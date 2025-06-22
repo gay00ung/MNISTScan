@@ -57,6 +57,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Compose dependencies
+    implementation (libs.androidx.runtime.livedata)
+
     // TfLite dependencies
     implementation (libs.tensorflow.lite)
     implementation (libs.tensorflow.lite.support)
